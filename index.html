@@ -71,10 +71,16 @@ body {
 }
 
 #fb-logo {
+    position:relative;
     width: 30px;
     height: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#fb-logo a div {
+    position:absolute;
+    top:0px;bottom:0px;left:0px;right:0px;
     background-image: url('/fb.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -126,6 +132,9 @@ Blizzard &nbsp; is &nbsp; coming &nbsp; in:
 <div class="fb-like" data-href="https://www.facebook.com/cserevue" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 </div>
 <div id='fb-logo'>
+<a href='https://www.facebook.com/cserevue'>
+<div></div>
+</a>
 </div>
 
 
