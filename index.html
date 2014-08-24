@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="countdown.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<style>
+@font-face {
+    font-family: 'gameofthrones';
+    src: url('/Game of Thrones.ttf');
+}
+body {
+    background-color: black;
+}
+#logo {
+    max-width: 800px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#countdown {
+    font-family: gameofthrones;
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    text-align: center;
+}
+#coming {
+    font-family: gameofthrones;
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#tickets {
+    font-family: gameofthrones;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#tickets a {
+    color: red;
+}
+
+#fb {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom:20px;
+
+}
+#fb a img {
+    width: 200px;
+}
+
+</style>
+<script>
+var opening = new Date(2014, 8, 23, 19, 30, 0);
+function tick() {
+
+    var ts = countdown(opening);
+    $('#countdown').html(ts.toString());
+    setTimeout(tick, 1000);
+}
+
+$(function() {
+    tick();
+});
+</script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1436641213235535&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id='logo'>
+logo
+</div>
+
+<div id='tickets'>
+<a href="http://rbs.cserevue.org.au">Buy Tickets</a>
+</div>
+
+<div id='coming'>
+Blizzard &nbsp; is &nbsp; coming &nbsp; in:
+</div>
+<div id='countdown'>
+</div>
+
+
+<div id='fb'>
+<div class="fb-like" data-href="https://www.facebook.com/cserevue" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+</div>
+
+
+</body>
+</html>
